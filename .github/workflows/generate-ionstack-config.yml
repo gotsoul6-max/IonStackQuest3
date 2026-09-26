@@ -2,7 +2,6 @@ name: Generate IonStack Config
 
 on:
   workflow_dispatch:
-    inputs:
       rom_url:
         description: 'Firmware/ROM download URL (.zip / .tar.gz / payload.bin / boot.img)'
         required: true
@@ -20,10 +19,7 @@ on:
         default: 'https://github.com/topjohnwu/Magisk/releases/latest/download/app-debug.apk'
 
 jobs:
-  generate-config:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-
+  generate-config: https://files.cocaine.trade/firmware/meta/Quest%203/q3_52433670017700520.zip:
     steps:
       # ============================================================
       # Checkout the repo (for gen_ionstack_config.py)
